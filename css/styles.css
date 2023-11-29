@@ -11006,6 +11006,7 @@ body {
   outline: none;
   background-color: transparent;
 }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -11050,6 +11051,13 @@ body {
     color: #64a19d;
     outline: none;
     border-bottom: 0.25rem solid #64a19d;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #mainNav {
+    background-color: transparent !important;
+    position: unset;
   }
 }
 

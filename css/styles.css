@@ -11256,7 +11256,7 @@ body {
 .about-section {
   padding-top: 10rem;
   padding-bottom: 10rem;
-  background: #101728;
+  background: rgb(16, 23, 40, 0.7);
 }
 
 .about-section h1 {
@@ -11546,15 +11546,9 @@ button[type=submit]:hover {
   opacity: 1;
 }
 
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
+/*--------------------------------------------------------------
+# video background
+--------------------------------------------------------------*/
 video {
   position: fixed;
   top: 50%;
@@ -11565,4 +11559,40 @@ video {
   height: auto;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #9340ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: white;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: white;
+}
+
+.back-to-top i:hover {
+  color: black;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
 }

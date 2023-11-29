@@ -1,13 +1,22 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+        el = el.trim()
+        if (all) {
+            return [...document.querySelectorAll(el)]
+        } else {
+            return document.querySelector(el)
+        }
+    }
+
+    /**
+     * Easy on scroll event listener 
+     */
+    const onscroll = (el, listener) => {
+        el.addEventListener('scroll', listener)
+    }
 
     function initSwiper() {
         document.querySelectorAll('.swiper').forEach(function(swiper) {
@@ -68,4 +77,20 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
     window.addEventListener('load', aosInit);
+
+    /**
+    * Back to top button
+    */
+    let backtotop = select('.back-to-top')
+    if (backtotop) {
+        const toggleBacktotop = () => {
+            if (window.scrollY > 100) {
+            backtotop.classList.add('active')
+            } else {
+            backtotop.classList.remove('active')
+            }
+        }
+        window.addEventListener('load', toggleBacktotop)
+        onscroll(document, toggleBacktotop)
+    }
 });

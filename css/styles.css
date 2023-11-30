@@ -11834,3 +11834,61 @@ video {
   line-height: 24px;
   font-size: 14px;
 }
+
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+.why {
+  /* padding-top: 10rem; */
+  padding-bottom: 10rem;
+  background: rgb(16, 23, 40, 0.8);
+  /* color: white; */
+  /* background-color: white; */
+}
+
+.why .why-item {
+  padding: 30px;
+  transition: all ease-in-out 0.4s;
+  background: #9340ff;
+  height: 100%;
+}
+
+.why .why-item .icon {
+  margin-bottom: 10px;
+}
+
+.why .why-item .icon i {
+  color: white;
+  font-size: 36px;
+  transition: 0.3s;
+}
+
+.why .why-item h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: white;
+}
+
+.why .why-item h4 a {
+  color: var(--color-secondary);
+  transition: ease-in-out 0.3s;
+}
+
+.why .why-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: white;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.why .why-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0 60px 0 rgba(var(--color-secondary-rgb), 0.1);
+}
+
+.why .why-item:hover h4 a {
+  color: var(--color-primary);
+}

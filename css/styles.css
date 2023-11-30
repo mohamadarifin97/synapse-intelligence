@@ -249,9 +249,9 @@ sup {
 }
 
 a {
-  color: var(--bs-link-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
+
 a:hover {
   color: var(--bs-link-hover-color);
 }
@@ -11742,4 +11742,95 @@ video {
   #footer .credits {
     padding-top: 4px;
   }
+}
+
+/* Services Section - Home Page
+------------------------------*/
+.services {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background: rgba(0,0,0, 0.8) !important;
+}
+
+.services h4 {
+  color: #9340ff;
+}
+
+.services .description {
+  color: #D3D3D3;
+}
+
+.services .service-item {
+  position: relative;
+  padding-top: 40px;
+}
+
+.services .service-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: grey;
+}
+
+.services .service-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #9340ff;
+  border-right: 5px solid var(--background-color);
+}
+
+.services .service-item .icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-right: 50px;
+  line-height: 0;
+  color: white;
+}
+
+.services .service-item .icon i {
+  color: rgba(var(--default-color-rgb), 0.7);
+  font-size: 56px;
+  transition: ease-in-out 0.3s;
+  z-index: 2;
+  position: relative;
+}
+
+.services .service-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: rgba(232, 69, 69, 0.5);
+  border-radius: 50px;
+  z-index: 1;
+  bottom: -15px;
+  right: -15px;
+  transition: 0.3s;
+}
+
+.services .service-item .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .service-item .title a {
+  color: var(--secondary-color);
+}
+
+.services .service-item .title a:hover {
+  color: var(--primary-color);
+}
+
+.services .service-item .description {
+  line-height: 24px;
+  font-size: 14px;
 }
